@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Game</title>
+		<style>
+			body {
+				background-color: #202c37;
+				background-color: #202025;
+				color: #abb2b9;
+				font-family: "Lucida Console", "Courier New", monospace;
+				margin: 0;
+				padding: 0;
+			}
+			.mono {
+				font-family: "Lucida Console", "Courier New", monospace;
+			}
+			canvas {
+				border-style: hidden;
+				background-color: white;
+				background-color: dimgrey;
+				background-color: #1c2833;
+				background-color: black;
+				margin: 0;
+				padding: 0;
+			}
+			.input {
+				background-color: #2e4053;
+				color: #abb2b9;
+				border-style: solid;
+				border-color: #1c2833;
+				border-radius: 4px;
+				padding: 4px;
+ 				transition: background-color 0.2s, color 0.2s;
+				transition-timing-function: ease-in-out;
+			}
+			.input:hover {
+				background-color: #34495e;
+				color: #abb2b9;
+ 				transition: background-color 0.2s;
+				transition-timing-function: ease-in-out;
+			}
+			.input:focus {
+				background-color: #34495e;
+				color: white;
+			}
+			.card {
+				font-size: 16px;
+			}
+			.bigText {
+				font-size: 24px;
+			}
+			.debug {
+				margin-top: 0.5%;
+				margin-bottom: 0px;
+				margin-left: 1%;
+				font-size: 16px;
+				background-color: black;
+				color: limegreen;
+				padding: 4px;
+				font-family: "Lucida Console", "Courier New", monospace;
+				border-style: hidden;
+			}
+			#debug {
+				color: green;
+				padding: 4px;
+				font-family: "Lucida Console", "Courier New", monospace;
+			}
+			#debugInput {
+				margin-top: 0.5%;
+				margin-bottom: 0px;
+				margin-left: 1%;
+				font-size: 16px;
+				background-color: black;
+				color: limegreen;
+				padding: 4px;
+				width: 97%;
+				font-family: "Lucida Console", "Courier New", monospace;
+				border-style: hidden;
+ 				transition: width 0.4s ease-in-out, color 0.4s ease-in-out;
+			}
+			#debugImage {
+				margin-top: 0.5%;
+				margin-bottom: 0px;
+				margin-left: 1%;
+				font-family: "Lucida Console", "Courier New", monospace;
+				border-style: hidden;
+				font-size: 16px;
+				padding: 4px;
+				background-color: black;
+				color: limegreen;
+			};
+			#debugInput:focus {
+				color: lime;
+			};
+			.canvas {
+    			position: fixed;
+			};
+		</style>
+	</head>
+	<body>
+		<canvas id="screen" class="canvas"></canvas>
+		<div display="none" id="debug">
+			<input type="text" id="debugInput"></input>
+			<button class="debug" onclick="eval(document.getElementById('debugInput').value)">Execute</button> the code.
+			<br><input type="file" id="debugImage" onchange="submitImage(event)"></input> 
+		</div>
+		<script type="text/javascript" src="scripts/physics/vector.js" defer></script>
+		<script type="text/javascript" src="scripts/physics/collision.js" defer></script>
+		<script type="text/javascript" src="scripts/physics/entity.js" defer></script>
+		<script type="text/javascript" src="scripts/physics/camera.js" defer></script>
+		<script type="text/javascript" src="scripts/draw.js" defer></script>
+		<script type="text/javascript" src="scripts/input.js" defer></script>
+		<script type="text/javascript" src="scripts/gui/gui.js" defer></script>
+		<script type="text/javascript" src="scripts/main.js" defer></script>
+	</body>
+</html>
